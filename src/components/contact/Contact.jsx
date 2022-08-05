@@ -4,10 +4,13 @@ import './contact.css';
 import { RiMessengerLine } from 'react-icons/ri';
 import { BsWhatsapp } from 'react-icons/bs';
 
-import { useRef } from 'react';
+import { useRef, useContext } from 'react';
 import emailjs from 'emailjs-com';
+import { FormattedMessage } from 'react-intl';
+import { langContext } from '../../context/langContext';
 
 const Contact = () => {
+	const locale = useContext(langContext);
 	const form = useRef();
 
 	const sendEmail = e => {
@@ -34,8 +37,12 @@ const Contact = () => {
 
 	return (
 		<section id='contact'>
-			<h5>Get in Touch</h5>
-			<h2>Contact Me</h2>
+			<h5>
+				<FormattedMessage id='contact.subtitle' defaultMessage='Get in Touch' />
+			</h5>
+			<h2>
+				<FormattedMessage id='contact.title' defaultMessage='Contact Me' />
+			</h2>
 
 			<div className='container contact__container'>
 				<div className='contact__options'>
@@ -61,7 +68,10 @@ const Contact = () => {
 							target='_blank'
 							rel='noreferrer'
 						>
-							Send a message
+							<FormattedMessage
+								id='contact.message'
+								defaultMessage='Send a message'
+							/>
 						</a>
 					</article>
 					<article className='contact__option'>
@@ -69,7 +79,10 @@ const Contact = () => {
 						<h4>Messenger</h4>
 						<h5>raul.tezen</h5>
 						<a href='https://m.me/raul.tezen' target='_blank' rel='noreferrer'>
-							Send a message
+							<FormattedMessage
+								id='contact.message'
+								defaultMessage='Send a message'
+							/>
 						</a>
 					</article>
 				</div>
@@ -78,17 +91,31 @@ const Contact = () => {
 					<input
 						type='text'
 						name='name'
-						placeholder='Your full name'
+						placeholder={
+							locale.locale === 'en-US' ? 'Your fullname' : 'Tu nombre'
+						}
 						required
 					/>
-					<input type='email' name='email' placeholder='Your email' required />
+					<input
+						type='email'
+						name='email'
+						placeholder={locale.locale === 'en-US' ? 'Your email' : 'Tu correo'}
+						required
+					/>
 					<textarea
 						name='message'
 						rows='7'
-						placeholder='Your message'
+						placeholder={
+							locale.locale === 'en-US' ? 'Your message' : 'Tu mensaje'
+						}
 						required
 					></textarea>
-					<button className='btn btn-primary'>Send Message</button>
+					<button className='btn btn-primary'>
+						<FormattedMessage
+							id='contact.sendmessage'
+							defaultMessage='Send Message'
+						/>
+					</button>
 				</form>
 			</div>
 		</section>

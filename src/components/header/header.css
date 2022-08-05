@@ -11,6 +11,24 @@ header {
 	color: var(--color-white);
 }
 
+.header__container-options {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 4rem;
+}
+
+.header__container-countries {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.header__container-countries > img {
+	width: 4rem;
+	cursor: pointer;
+}
+
 .header__container-h5 {
 	font-size: 1rem;
 	color: var(--color-light);

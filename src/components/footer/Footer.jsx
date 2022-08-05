@@ -5,6 +5,7 @@ import './footer.css';
 // import { IoLogoTwitter } from 'react-icons/io';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithub } from 'react-icons/fa';
+import { FormattedMessage } from 'react-intl';
 
 const Footer = () => {
 	return (
@@ -15,25 +16,41 @@ const Footer = () => {
 
 			<ul className='permalinks'>
 				<li>
-					<a href='/#'>Home</a>
+					<a href='/#'>
+						<FormattedMessage id='footer.home' defaultMessage='Home' />
+					</a>
 				</li>
 				<li>
-					<a href='#about'>About</a>
+					<a href='#about'>
+						<FormattedMessage id='footer.about' defaultMessage='About' />
+					</a>
 				</li>
 				<li>
-					<a href='#experience'>Experience</a>
+					<a href='#experience'>
+						<FormattedMessage
+							id='footer.experience'
+							defaultMessage='Experience'
+						/>
+					</a>
 				</li>
 				{/* <li>
 					<a href='#services'>Services</a>
 				</li> */}
 				<li>
-					<a href='#portfolio'>Portfolio</a>
+					<a href='#portfolio'>
+						<FormattedMessage
+							id='footer.portfolio'
+							defaultMessage='Portfolio'
+						/>
+					</a>
 				</li>
 				{/* <li>
 					<a href='#testimonials'>Testimonials</a>
 				</li> */}
 				<li>
-					<a href='#contact'>Contact</a>
+					<a href='#contact'>
+						<FormattedMessage id='footer.contact' defaultMessage='Contact' />
+					</a>
 				</li>
 			</ul>
 
@@ -47,7 +64,13 @@ const Footer = () => {
 			</div>
 
 			<div className='footer__copyright'>
-				<small>&copy; Raul Tezen. All rights reserved</small>
+				<small>
+					&copy; Raul Tezen.
+					<FormattedMessage
+						id='footer.rights'
+						defaultMessage='All rights reserved'
+					/>
+				</small>
 			</div>
 		</footer>
 	);

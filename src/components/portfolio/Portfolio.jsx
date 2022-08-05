@@ -7,6 +7,8 @@ import IMG4 from '../../assets/entregable03.JPG';
 import IMG5 from '../../assets/entregable02.JPG';
 import IMG6 from '../../assets/entregable01.JPG';
 
+import { FormattedMessage } from 'react-intl';
+
 const data = [
 	{
 		id: 1,
@@ -55,8 +57,15 @@ const data = [
 const Portfolio = () => {
 	return (
 		<section id='portfolio'>
-			<h5>My Recent Work</h5>
-			<h2>Portfolio</h2>
+			<h5>
+				<FormattedMessage
+					id='portfolio.subtitle'
+					defaultMessage='My recent work'
+				/>
+			</h5>
+			<h2>
+				<FormattedMessage id='portfolio.title' defaultMessage='Portfolio' />
+			</h2>
 
 			<div className='container portfolio__container'>
 				{data.map(({ id, image, title, github, demo }) => (
@@ -75,7 +84,10 @@ const Portfolio = () => {
 								target='_blank'
 								rel='noreferrer'
 							>
-								Live Demo
+								<FormattedMessage
+									id='portfolio.demo'
+									defaultMessage='Live Demo'
+								/>
 							</a>
 						</div>
 					</article>
