@@ -4,11 +4,15 @@ import CTA from './CTA';
 import ME from '../../assets/normal fondo.jpg';
 
 import HeaderSocials from './HeaderSocials';
+import ReactSwitch from 'react-switch';
 
-const Header = () => {
+const Header = ({ lightMode, handleLightMode }) => {
 	return (
 		<header>
 			<div className='container header__container'>
+				<div className='header__container-switch'>
+					<ReactSwitch onChange={handleLightMode} checked={lightMode} />
+				</div>
 				<h5 className='header__container-h5'>Hello I'm</h5>
 				<h1 className='header__container-h1'>Raul Tezen</h1>
 				<h5 className='text-light header__container-h5'>Front-End Developer</h5>

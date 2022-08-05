@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Experience from './components/experience/Experience';
@@ -9,10 +9,19 @@ import Portfolio from './components/portfolio/Portfolio';
 /* import Services from './components/services/Services';
 import Testimonials from './components/testimonials/Testimonials'; */
 
+// export const ThemeContext = createContext(null);
+
 const App = () => {
+	const [lightMode, setLightMode] = useState(false);
+
+	const handleLightMode = () => {
+		setLightMode(prevLightMode => !prevLightMode);
+	};
+
 	return (
-		<>
-			<Header />
+		// <ThemeContext.Provider value={{ theme }}>
+		<div className={`${lightMode && 'darktheme containerDark'}`}>
+			<Header lightMode={lightMode} handleLightMode={handleLightMode} />
 			<Nav />
 			<About />
 			<Experience />
@@ -21,7 +30,8 @@ const App = () => {
 			{/* <Testimonials /> */}
 			<Contact />
 			<Footer />
-		</>
+		</div>
+		/* </ThemeContext.Provider> */
 	);
 };
 

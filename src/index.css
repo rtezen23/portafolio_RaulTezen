@@ -22,11 +22,26 @@
 	--container-width-lg: 75%;
 	--container-width-md: 86%;
 	--container-width-sm: 90%;
+	--nav-color: rgba(0, 0, 0, 0.3);
+}
+
+.darktheme {
+	--color-bg: #fff;
+	--color-primary: #02a0c7;
+	--color-white: #000;
+	--color-light: #413939;
+	--color-bg-variant: rgba(132, 204, 255, 0.4);
+	--nav-color: rgba(231, 232, 236, 0.671);
+}
+
+.containerDark {
+	background-color: #e0e0e0;
 }
 
 /* not working */
 html {
 	scroll-behavior: smooth;
+	transition: var(--transition);
 }
 
 ::-webkit-scrollbar {
@@ -42,6 +57,7 @@ body {
 }
 
 /* GENERAL STYLES */
+
 .container {
 	width: var(--container-width-lg);
 	margin: 0 auto;
