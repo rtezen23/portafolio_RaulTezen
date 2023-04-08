@@ -1,5 +1,5 @@
 import React from 'react';
-import CV from '../../assets/CV - RAUL TEZEN.pdf';
+import CV from '../../assets/CV - RAUL TEZEN 2023.pdf';
 import { FormattedMessage } from 'react-intl';
 
 const CTA = () => {

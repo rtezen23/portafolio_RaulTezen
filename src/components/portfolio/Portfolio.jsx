@@ -24,13 +24,13 @@ const data = [
 		github: 'https://github.com/rtezen23/React_proyectoFinal',
 		demo: 'https://entregable-react-006.netlify.app/',
 	},
-	{
+	/*{
 		id: 3,
 		image: IMG3,
 		title: "User's CRUD",
 		github: 'https://github.com/rtezen23/entregable04_React',
 		demo: 'https://entregable-react-004.netlify.app/',
-	},
+	},*/
 	{
 		id: 4,
 		image: IMG4,
