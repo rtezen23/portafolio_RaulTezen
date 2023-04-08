@@ -2,7 +2,7 @@ import React from 'react';
 import './portfolio.css';
 import IMG1 from '../../assets/entregable05.JPG';
 import IMG2 from '../../assets/entregable06.JPG';
-import IMG3 from '../../assets/entregable04.JPG';
+//import IMG3 from '../../assets/entregable04.JPG';
 import IMG4 from '../../assets/entregable03.JPG';
 import IMG5 from '../../assets/entregable02.JPG';
 import IMG6 from '../../assets/entregable01.JPG';
